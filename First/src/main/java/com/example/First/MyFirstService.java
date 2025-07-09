@@ -1,12 +1,28 @@
 package com.example.First;
 
+import lombok.Getter;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
 
 @Service
+@PropertySource("classpath:custom.properties")
 public class MyFirstService {
 
     private final MyFirstClass myFirstClass;
+
+    @Value("${my.prop}")
+    @Getter
+    private String customProperty;
+
+    @Value("Hello! New property value.")
+    @Getter
+    private String customPropertyString;
+
+    @Value("123")
+    @Getter
+    private Integer customPropertyInt;
 
     public MyFirstService(@Qualifier("bean1") MyFirstClass myFirstClass) {
         this.myFirstClass = myFirstClass;
