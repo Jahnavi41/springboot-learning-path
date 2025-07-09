@@ -15,6 +15,8 @@ public class FirstApplication {
 
 		MyFirstService myFirstService = context.getBean(MyFirstService.class);
 		System.out.println(myFirstService.myFirstService());
+		System.out.println(myFirstService.getJavaVersion());
+		System.out.println(myFirstService.getOs());
 	}
 
 }
