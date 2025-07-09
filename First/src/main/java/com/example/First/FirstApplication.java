@@ -13,10 +13,6 @@ public class FirstApplication {
 
 		MyFirstService myFirstService = context.getBean(MyFirstService.class);
 		System.out.println(myFirstService.myFirstService());
-		System.out.println(myFirstService.getCustomProperty());
-		System.out.println(myFirstService.getCustomPropertyInt());
-		System.out.println(myFirstService.getCustomPropertyString());
-		System.out.println(myFirstService.getCustomProperty2());
 	}
 
 }
