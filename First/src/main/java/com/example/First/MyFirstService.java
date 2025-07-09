@@ -28,6 +28,11 @@ public class MyFirstService {
     public String getOs() {
         return "OS is: "+environment.getProperty("os.name");
     }
+
+    public String readProperty() {
+        return "Property from application.properties files: "+environment.getProperty("my.custom.property");
+    }
+
     public String myFirstService() {
         return "The dependency is saying: "+myFirstClass.sayHello();
     }

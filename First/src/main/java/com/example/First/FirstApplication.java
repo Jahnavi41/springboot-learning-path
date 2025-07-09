@@ -17,6 +17,7 @@ public class FirstApplication {
 		System.out.println(myFirstService.myFirstService());
 		System.out.println(myFirstService.getJavaVersion());
 		System.out.println(myFirstService.getOs());
+		System.out.println(myFirstService.readProperty());
 	}
 
 }
